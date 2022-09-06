@@ -12,3 +12,11 @@ spring:
     console:
       enabled: true
       path: /h2console/
+
+  main:
+    allow-bean-definition-overriding: true
+custom:
+  external-api:
+    get_all_emp: http://localhost:8081/emp
+    get_emp_by_id: http://localhost:8081/employee/{eid}
+    add_emp: http://localhost:8081/addEmp

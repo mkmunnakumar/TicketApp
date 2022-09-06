@@ -9,7 +9,6 @@ public class Passenger {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long pnr;
     private String name;
-    private Integer age;
     private Double fare;
 
 
@@ -17,10 +16,10 @@ public class Passenger {
         super();
     }
 
-    public Passenger(Long pnr, String name, Integer age, Double fare) {
+    public Passenger(Long pnr, String name, Double fare) {
         this.pnr = pnr;
         this.name = name;
-        this.age = age;
+        //this.age = age;
         this.fare = fare;
     }
 
@@ -40,14 +39,6 @@ public class Passenger {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public Double getFare() {
         return fare;
     }
@@ -61,7 +52,6 @@ public class Passenger {
         return "TicketEntity{" +
                 "pnr=" + pnr +
                 ", name='" + name + '\'' +
-                ", age=" + age +
                 ", fare="+ fare +
                 '}';
     }
